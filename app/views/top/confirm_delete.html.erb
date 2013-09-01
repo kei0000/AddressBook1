@@ -1,0 +1,10 @@
+<div class="title_top">confirm delete</div>
+
+<div class="confirm message">
+  Are you sure you want to delete the following address?(id = <%=h @address.id %>)
+</div>
+<br />
+<%= link_to '削除実行', {:action => 'exec_delete', :id => @address.id}, :confirm => "#{@address.title}を削除してもよろしいですか？" %>
+&nbsp;&nbsp;<%= link_to '中止', :controller => 'top', :action => 'index' %><br />
+<br />
+<%= render :partial => 'address_label' %>

@@ -1,0 +1,12 @@
+<div class="title_top"> top page </div>
+<table>
+<% for address in @addresses %>
+<tr>
+  <td class='tltle'><%=h address[:title] %></td>
+  <td class='tel'><%=h address[:tel] %></td>
+  <td class='edit'><%= link_to '編集', :action => 'edit', :id => address[:id] %></td>
+  <td class='edit'><%= link_to '削除', :action => 'confirm_delete', :id => address[:id] %></td>
+  
+</tr>
+<% end %>
+</table>

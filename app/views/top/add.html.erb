@@ -1,0 +1,17 @@
+<div class="title_top">add address</div>
+
+<% form_tag(:controller => 'top', :action => 'confirm_add') do -%>
+
+<table><tr>
+    <td>title:</td><td><%= text_field_tag "title", @address[:title], :size => 25 %></td>
+  </tr><tr>
+    <td>tel:</td><td><%= text_field_tag "tel", @address[:tel],:size => 12, :style => 'ime-mode:disabled' %></td>
+  </tr><tr>
+    <td>open_hours:</td><td><%= text_field_tag "open_hours", @address[:open_hours],:size => 40, :style => 'ime-mode:disabled' %></td>
+  </tr><tr>
+    <td>memo:</td><td><%= text_area_tag "memo", @address[:memo], :size => "40x3" %></td>
+  </tr><tr>
+  <td></td><td><%= submit_tag "  確  認  ", :class => "entry_form_commit"  %></td>
+</tr></table>
+
+<% end -%>
