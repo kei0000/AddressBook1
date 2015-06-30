@@ -201,3 +201,6 @@ test
 vendor
   External libraries that the application depends on. Also includes the plugins subdirectory.
   This directory is in the load path.
+
+2015/6/30 kei add
+I'll restart to contribute.
