@@ -1,6 +1,7 @@
 class TopController < ApplicationController
 
-  
+  #-- Basic Methods -------------------------------------------------
+
   def index
     @addresses = Address.find(:all)
   end
@@ -20,7 +21,7 @@ class TopController < ApplicationController
     render :action => 'add'
   end
   
-  #---------------------------------------------------
+  #-- delete -------------------------------------------------
   
   def confirm_delete
     @address = Address.find params[:id]
@@ -31,12 +32,11 @@ class TopController < ApplicationController
     redirect_to :action => 'index'
   end
   
-  #--------------------------------------------------------
-  
+  #-- add -------------------------------------------------
+
   def confirm_add
     @address = params # for confirm.html.erb
     session[:address] = params
-    
   end
   
   def exec_add
